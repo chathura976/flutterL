@@ -25,46 +25,25 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      DefaultTabController(
-        length: 3,
-         child: Scaffold(
+      Scaffold(
           appBar: AppBar(
             title: const Text("Chathura"),
-            leading: IconButton(
-              icon:Icon(Icons.menu), onPressed: () {  },
-         
-            ),
-            actions: [
-              IconButton(
-                icon:Icon(Icons.search), onPressed: () {  },
-         
-              ),
-              IconButton(
-                icon:const Icon(Icons.more_vert), onPressed: () {  },
-         
-              ),
-            ],
-            flexibleSpace: Image.asset("assets/logo.png",
-            fit: BoxFit.cover,),
-            bottom:  const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
-              ],
-            ),
             elevation: 2.0,
             backgroundColor: Colors.yellow,
           ),
-           body: const TabBarView(
-         children: [
-         Icon(Icons.directions_car),
-        Icon(Icons.directions_transit),
-        Icon(Icons.directions_bike),
-        ],
-      ),
-               ),
-       );
+            body: Column(
+              children: [
+                Text('Text 01', style: TextStyle(fontSize: 20),
+                ),
+                Text('Text 02', style: TextStyle(fontSize: 20),
+                ),
+                Text('Text 02', style: TextStyle(fontSize: 20),
+                )
+              ],
+            ),
+
+               );
+
 
   }
 }
